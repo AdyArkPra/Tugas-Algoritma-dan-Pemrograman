@@ -6,12 +6,12 @@ main()
 	char nama[50], nim[10];
 	float rata2, uts, uas;
 	
-	cout << "Tugas Praktikum Algoritma dan Pemrograman 1\n" << endl;
+	cout << "Tugas Praktikum Algoritma dan Pemrograman 1\n";
   	cout << "NIM  : 124200043" << endl;
   	cout << "Nama : Adyatma Arkaan Pradipa\n" << endl;
   	cout << "------------------------------------------------" << endl;
 	cout << "              INPUT NILAI MAHASISWA             " << endl;
-  	cout << "------------------------------------------------\n" << endl;
+  	cout << "------------------------------------------------\n";
 	
 	cout << "NIM  : ";
 	cin >> nim; cin.ignore();

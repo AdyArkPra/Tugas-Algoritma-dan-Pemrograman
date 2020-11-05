@@ -40,14 +40,16 @@ main()
 		cin >> m;
 		cout << "Input angka N : ";
 		cin >> n;
+			cout << "\nhasil" << " " << m  << " ^ " << n << endl;
 			jumlah = 1;
 			for (int loop = 1; loop <= n; loop++)
 			{
 			jumlah *= m;
 				if (loop != n)
 				{cout << m << " X "; }
+				else
+				{cout << setprecision(999999) << m << " = " <<jumlah;}
 			}
-			{cout << setprecision(999999) <2< m << " = " <<jumlah;}
 	break;
 	default : 
 	cout << ("Input salah !\n");

@@ -58,7 +58,7 @@ void prog_volume(){
 	
 	hitung[3] = 3.14 * jari * jari * tinggi;
 	
-	cout << "Keliling Lingkaran adalah " << hitung[3];
+	cout << "volume tabung adalah " << hitung[3];
 	cout << endl;
 	ulang();
 }

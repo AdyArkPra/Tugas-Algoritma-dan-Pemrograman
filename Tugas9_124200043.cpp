@@ -3,7 +3,7 @@ using namespace std;
 int main()
 {
     double rata_akhir=0.0, rata=0.0;
-    int i_kurang, selisih[99], maksimum = 0, minimum = 0, i=1, j=1;
+    int i_kurang, selisih[999] = {0}, maksimum = 0, maksimum2 = 0, minimum = 0, i=1, j=1;
     cout << "Masukkan banyak angka : ";
     cin >> j;
     
@@ -60,14 +60,14 @@ int main()
 		
 		if (selisih[i] < 0) selisih[i] = selisih[i] * (-1);
 		
-		maksimum = selisih[1];
+		maksimum2 = selisih[1];
 		for (i = 1; i <= j; i++){
-		if (selisih[i] > maksimum){
-			maksimum = selisih[i];
+			if (selisih[i] > maksimum2){
+				maksimum2 = selisih[i];
+			}
 		}
 	}
-	cout << maksimum;
-	}
+	cout << maksimum2;
 	
 	return 0;
 }

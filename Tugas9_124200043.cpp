@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main()
 {
@@ -7,10 +8,10 @@ int main()
     cout << "Masukkan banyak angka : ";
     cin >> j;
     
-    int angka_ke[i];
+    int angka_ke[i] = {0};
     
-    for (i=1; i<=j; i++){
-		cout << "Angka ke-" << i << " : ";
+    for (i=0; i< j; i++){
+		cout << "Angka ke-" << i+1 << " : ";
 		cin >> angka_ke[i];
 	}
 	
@@ -18,56 +19,47 @@ int main()
     cout << "_____Hasil_____" << endl;
     
     cout << "Deret       : ";
-	for (i = 1; i <= j; i++){
-		cout << angka_ke[i];
-		cout << " ";
+	for (i = 0; i < j; i++){
+		cout << angka_ke[i] << " ";
 	}
 	cout << endl;
 	
-	cout << "Maksimum    : ";
-    maksimum = angka_ke[1];
-	for (i = 1; i <= j; i++){
+    minimum = angka_ke[0];
+    maksimum = angka_ke[0];
+    
+	for (i = 0; i < j; i++){
 		if (angka_ke[i] > maksimum){
 			maksimum = angka_ke[i];
 		}
-	}
-	cout << maksimum;
-	cout << endl;
-	
-	cout << "Minimum     : ";
-    minimum = angka_ke[1];
-	for(i = 1; i <= j; i++){
-		if (angka_ke[i] < minimum){
+		else if (angka_ke[i] < minimum){
 			minimum = angka_ke[i];
 		}
 	}
-	cout << minimum;
-	cout << endl;
+	cout << "Maksimum    : " << maksimum << endl;
+	cout << "Minimum     : " << minimum << endl;
 	
-	cout << "Rata-rata   : ";
-	for(i = 1; i <= j; i++){
+	for(i = 0; i < j; i++){
 		rata += angka_ke[i];
 	}
-	rata_akhir = rata / j;
-	cout << rata_akhir;
-	cout << endl;
 	
-	cout << "Selisih Max : ";
-	for(i = 1; i <= j; i++){
-		if (i < j) i_kurang=i+1;
+	rata_akhir = rata / j;
+	cout << "Rata-rata   : " << setprecision(3) << rata_akhir << endl;
+	
+	j=j-1;
+	for(i = 0; i < j; i++){
+		i_kurang=i+1;
 		
-		selisih[i] = angka_ke[i] - angka_ke[i_kurang];
+		if (i < j) selisih[i] = angka_ke[i] - angka_ke[i_kurang];
+		else selisih[i] = 0;
 		
 		if (selisih[i] < 0) selisih[i] = selisih[i] * (-1);
 		
-		maksimum2 = selisih[1];
-		for (i = 1; i <= j; i++){
-			if (selisih[i] > maksimum2){
+		maksimum2 = selisih[0];
+		if (selisih[i] > maksimum2){
 				maksimum2 = selisih[i];
-			}
 		}
 	}
-	cout << maksimum2;
+	cout << "Selisih Max : " << maksimum2;
 	
 	return 0;
 }

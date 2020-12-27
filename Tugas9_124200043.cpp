@@ -10,7 +10,7 @@ int main()
     
     int angka_ke[i] = {0};
     
-    for (i=0; i< j; i++){
+    for (i=0; i < j; i++){
 		cout << "Angka ke-" << i+1 << " : ";
 		cin >> angka_ke[i];
 	}
@@ -53,11 +53,10 @@ int main()
 		else selisih[i] = 0;
 		
 		if (selisih[i] < 0) selisih[i] = selisih[i] * (-1);
-		
-		maksimum2 = selisih[0];
 		if (selisih[i] > maksimum2){
 				maksimum2 = selisih[i];
 		}
+		cout << selisih[i] << endl;
 	}
 	cout << "Selisih Max : " << maksimum2;
 	

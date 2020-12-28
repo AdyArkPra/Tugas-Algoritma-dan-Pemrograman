@@ -56,7 +56,6 @@ int main()
 		if (selisih[i] > maksimum2){
 				maksimum2 = selisih[i];
 		}
-		cout << selisih[i] << endl;
 	}
 	cout << "Selisih Max : " << maksimum2;
 	
